@@ -1,5 +1,5 @@
 #!groovy
-// Check devops-client properties
+// Check devops-client.itaenerji.local properties
 properties([disableConcurrentBuilds()])
 
 pipeline {
