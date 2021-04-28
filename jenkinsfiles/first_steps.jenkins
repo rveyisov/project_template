@@ -1,9 +1,9 @@
 #!groovy
-// Check ub1 properties
+// Check devops-client properties
 properties([disableConcurrentBuilds()])
 
 pipeline {
-    agent { 
+    agent {
         label 'master'
         }
     options {
@@ -13,12 +13,12 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh root@ub1 \'hostname\''
+                sh 'ssh root@devops-client.itaenerji.local \'hostname\''
             }
         }
         stage("Second step") {
             steps {
-                sh 'ssh root@ub1 \'uptime\''
+                sh 'ssh root@devops-client.itaenerji.local \'uptime\''
             }
         }
     }
